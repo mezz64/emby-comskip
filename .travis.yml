@@ -11,4 +11,4 @@ after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
     docker push kmcgill88/k-plex:latest;
-fi
+    fi
