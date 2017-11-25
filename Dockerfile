@@ -14,14 +14,13 @@ RUN apt-get update && \
 	--sysconfdir=/config/comskip && \
  make && \
  make install && \
+ mkdir -p /config/comskip && \
 
 # Cleanup
     apt-get -y autoremove && \
     apt-get -y clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/* && \
-    rm -rf /var/tmp/* \
-
-mkdir -p /config/comskip
+    rm -rf /var/tmp/*
 
 ADD ./comskip.ini /config/comskip/comskip.ini
