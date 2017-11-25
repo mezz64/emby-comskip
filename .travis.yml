@@ -6,3 +6,9 @@ services:
 script:
   - docker build -t dselck/plex-comskip:latest .
   - docker ps -a
+  
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    docker push kmcgill88/k-plex:latest;
+fi
