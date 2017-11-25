@@ -4,11 +4,11 @@ services:
   - docker
 
 script:
-  - docker build -t dselck/PMS-Comskip:latest .
+  - docker build -t dselck/plex-comskip:latest .
   - docker ps -a
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    docker push dselck/PMS-Comskip:latest;
+    docker push dselck/plex-comskip:latest;
     fi
