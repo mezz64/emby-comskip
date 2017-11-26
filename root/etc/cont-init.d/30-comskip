@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv bash
+
+# make folder
+mkdir -p /config/comskip
+
+[[ ! -e /config/comskip/comskip.ini ]] && \
+    cp /defaults/comskip.ini.bak /config/comskip/comskip.ini
+#Don't need to worry about permissions - they are taken care of later
