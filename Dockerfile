@@ -14,7 +14,6 @@ RUN apt-get update && \
 	--sysconfdir=/config/comskip && \
  make && \
  make install && \
- mkdir -p /comskip && \
 
 # Cleanup
     apt-get -y autoremove && \
@@ -22,7 +21,5 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/* && \
     rm -rf /var/tmp/*
-    
-VOLUME /comskip
 
-COPY ./comskip.ini /comskip/comskip.ini
+COPY root/ /
