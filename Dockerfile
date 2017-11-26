@@ -1,7 +1,13 @@
 FROM plexinc/pms-docker:plexpass
 
 RUN apt-get update && \
-    apt-get install -y git build-essential libargtable2-dev autoconf ffmpeg && \
+    apt-get install -y \
+    	git \
+	build-essential \
+	ibargtable2-dev \
+	autoconf \
+	ffmpeg \
+	libtool && \
 
 # Build comskip
  git clone git://github.com/erikkaashoek/Comskip /tmp/comskip && \
