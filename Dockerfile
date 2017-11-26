@@ -4,7 +4,7 @@ RUN apt-get update && \
     apt-get install -y \
     	git \
 	build-essential \
-	ibargtable2-dev \
+	libargtable2-dev \
 	autoconf \
 	ffmpeg \
 	libtool && \
