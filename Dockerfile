@@ -22,5 +22,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/* && \
     rm -rf /var/tmp/*
+    
+VOLUME /config
 
-ADD ./comskip.ini /config/comskip/comskip.ini
+COPY ./comskip.ini /config/comskip/comskip.ini
