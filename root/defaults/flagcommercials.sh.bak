@@ -7,4 +7,9 @@ FlagCommercials(){
     $COMSKIPPATH --ini=$COMSKIPINI "$INPUTVIDEO"
 }
 
+if [ $# -ne 1 ]; then
+    echo "Need to specify a video file on which to flag commercials"
+    exit 1
+fi
+
 FlagCommercials
