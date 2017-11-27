@@ -1,0 +1,10 @@
+#!/bin/sh
+INPUTVIDEO="$1"  # Full path to recording, i.e. /home/user/Videos/News.ts
+COMSKIPPATH="/usr/bin/comskip"
+COMSKIPINI="/config/comskip/comskip.ini"
+
+FlagCommercials(){
+    $COMSKIPPATH --ini=$COMSKIPINI "$INPUTVIDEO"
+}
+
+FlagCommercials
