@@ -5,4 +5,10 @@ mkdir -p /config/comskip
 
 [[ ! -e /config/comskip/comskip.ini ]] && \
     cp /defaults/comskip.ini.bak /config/comskip/comskip.ini
+[[ ! -e /config/comskip/flagcommercials.sh ]] && \
+    cp /defaults/flagcommercials.sh.bak /config/comskip/flagcommercials.sh
+
+# Create a symbolic link for the sh file in /usr/bin so that we can call it easier
+ln -sf /config/comskip/flagcommercials.sh /usr/bin/flagcommercials.sh
+ 
 #Don't need to worry about permissions - they are taken care of later
