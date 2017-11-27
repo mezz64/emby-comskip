@@ -8,7 +8,9 @@ mkdir -p /config/comskip
 [[ ! -e /config/comskip/flagcommercials.sh ]] && \
     cp /defaults/flagcommercials.sh.bak /config/comskip/flagcommercials.sh
 
-# Create a symbolic link for the sh file in /usr/bin so that we can call it easier
-ln -sf /config/comskip/flagcommercials.sh /usr/bin/flagcommercials.sh
+# Make the script executable
+chmod +x /config/comskip/flagcommercials.sh
+# add the script to the path
+ln -sf /config/comskip/flagcommercials.sh /usr/local/bin/flagcommercials
  
-#Don't need to worry about permissions - they are taken care of later
+#Don't need to worry about overall permissions - they are taken care of later with the plex scripts
