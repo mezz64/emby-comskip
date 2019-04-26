@@ -1,4 +1,4 @@
-FROM plexinc/pms-docker:plexpass
+FROM emby/embyserver:beta
 
 RUN apt-get update && \
     apt-get upgrade -y && \
@@ -8,7 +8,6 @@ RUN apt-get update && \
 		       libargtable2-dev \
 		       autoconf \
                        libtool-bin \
-		       ffmpeg \
 		       libsdl1.2-dev \
 		       libavutil-dev \
 		       libavformat-dev \
