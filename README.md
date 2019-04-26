@@ -1,2 +1,2 @@
-# plex-comskip
-Vanilla plex server with comskip added in for DVR functionality
+# emby-comskip
+Vanilla emby server with comskip added in for DVR functionality
